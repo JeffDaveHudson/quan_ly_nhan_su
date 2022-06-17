@@ -1,7 +1,7 @@
                                                     <!-- Bảng Thông Tin Các Mục Trang Chủ -->
 {% extends "employee_information/base.html" %} {% load humanize %} {% block pageContent %}
 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
-    <div class="mdc-card">
+    <div class="mdc-card"  style="border-radius: 20px; align-items: center;">
         <div class="d-flex justify-content-between">
             <h4 class="card-title mb-0">Trang Chủ</h4>
         </div>
@@ -11,7 +11,7 @@
     <hr class="w-100">
 </div>
 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet">
-    <div class="mdc-card info-card info-card--success">
+    <div class="mdc-card info-card info-card--success" style="border-radius: 10px;">
         <div class="card-inner">
             <h5 class="card-title">Phòng Ban</h5>
             <h5 class="font-weight-light pb-2 mb-1 border-bottom">{{ total_department|intcomma }}</h5>
@@ -23,7 +23,7 @@
     </div>
 </div>
 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet">
-    <div class="mdc-card info-card info-card--primary">
+    <div class="mdc-card info-card info-card--primary" style="border-radius: 10px;">
         <div class="card-inner">
             <h5 class="card-title">Vị Trí</h5>
             <h5 class="font-weight-light pb-2 mb-1 border-bottom">{{ total_position|intcomma }}</h5>
@@ -35,7 +35,7 @@
     </div>
 </div>
 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet">
-    <div class="mdc-card info-card info-card--info">
+    <div class="mdc-card info-card info-card--info" style="border-radius: 10px;">
         <div class="card-inner">
             <h5 class="card-title">Nhân Viên</h5>
             <h5 class="font-weight-light pb-2 mb-1 border-bottom">{{ total_employee|intcomma }}</h5>
