@@ -86,13 +86,13 @@
 <script>
     $(function() {
         $('#create_new').click(function() {
-            uni_modal("Add New Department", "{% url 'manage_departments-page' %}")
+            uni_modal("Thêm Mới Phòng Ban", "{% url 'manage_departments-page' %}")
         })
         $('.edit-data').click(function() {
-            uni_modal("Edit Department", "{% url 'manage_departments-page' %}?id=" + $(this).attr('data-id'))
+            uni_modal("Chỉnh Sửa Phòng Ban", "{% url 'manage_departments-page' %}?id=" + $(this).attr('data-id'))
         })
         $('.delete-data').click(function() {
-            _conf("Are you sure to delete this department?", "delete_department", [$(this).attr('data-id')])
+            _conf("Bạn Có Chắn Chắn Muốn Xóa Phòng Ban Này?", "delete_department", [$(this).attr('data-id')])
         })
     })
 

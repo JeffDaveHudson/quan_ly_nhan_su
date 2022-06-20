@@ -85,13 +85,13 @@
 <script>
     $(function() {
         $('#create_new').click(function() {
-            uni_modal("Add New Position", "{% url 'manage_positions-page' %}")
+            uni_modal("Thêm Mới Vị Trí", "{% url 'manage_positions-page' %}")
         })
         $('.edit-data').click(function() {
-            uni_modal("Edit Position", "{% url 'manage_positions-page' %}?id=" + $(this).attr('data-id'))
+            uni_modal("Chỉnh Sửa Vị Trí", "{% url 'manage_positions-page' %}?id=" + $(this).attr('data-id'))
         })
         $('.delete-data').click(function() {
-            _conf("Are you sure to delete this position?", "delete_position", [$(this).attr('data-id')])
+            _conf("Bạn Có Chắn Chắn Muốn Xóa Vị Trí Này?", "delete_position", [$(this).attr('data-id')])
         })
     })
 
