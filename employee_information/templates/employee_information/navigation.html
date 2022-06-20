@@ -1,14 +1,22 @@
                                                     <!-- Menu Trái -->
 {% load static %}
 <!-- partial:partials/_sidebar.html -->
+<style>
+    a:hover{
+        background-color: mediumblue;
+        border-radius: 10px;
+        transition: 0.3s;   
+    }
+    
+</style>
 <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open"  style="background-image: url('https://wallpapercave.com/wp/wp6080925.jpg'); background-size: cover;">
-    <div class="mdc-drawer__header border-bottom border-light">
-        <a href="{% url 'home-page' %}" class="brand-logo">
+    <div class="mdc-drawer__header border-bottom border-light" style="margin-top: 50px;">
+        <!-- <a href="{% url 'home-page' %}" class="brand-logo"> -->
             
             <h3 class="text-center text-light">PK Tech</h3>
-        </a>
+        <!-- </a> -->
     </div>
-    <div class="mdc-drawer__content">
+    <div class="mdc-drawer__content" style="margin-top: 20px;">
         <div class="mdc-list-group">
             <nav class="mdc-list mdc-drawer-menu">
                 <div class="mdc-list-item mdc-drawer-item">
@@ -39,4 +47,5 @@
             style="width: 150px; height: 150px; margin-bottom: 55px; border-radius: 10em 4em;"/>
     </div>
 </aside>
+
 <!-- partial -->
