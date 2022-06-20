@@ -5,23 +5,23 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group mb-3">
-                    <label for="code" class="control-label">Mã Nhân Viên</label>
-                    <input type="text" name="code" id="code" class="form-control form-control-sm rounded-0" value="{% if employee.code %}{{employee.code}}{% endif %}" required>
+                    <!-- <label for="code" class="control-label">Mã Nhân Viên</label> -->
+                    <input type="text" name="code" id="code" placeholder="Mã Nhân Viên..." class="form-control form-control-sm rounded-0" value="{% if employee.code %}{{employee.code}}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="firstname" class="control-label">Họ</label>
-                    <input type="text" name="firstname" id="firstname" class="form-control form-control-sm rounded-0" value="{% if employee.firstname %}{{employee.firstname}}{% endif %}" required>
+                    <!-- <label for="firstname" class="control-label">Họ</label> -->
+                    <input type="text" name="firstname" id="firstname" placeholder="Họ..." class="form-control form-control-sm rounded-0" value="{% if employee.firstname %}{{employee.firstname}}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="middlename" class="control-label">Tên Lót</label>
-                    <input type="text" name="middlename" id="middlename" class="form-control form-control-sm rounded-0" value="{% if employee.middlename %}{{employee.middlename}}{% endif %}">
+                    <!-- <label for="middlename" class="control-label">Tên Lót</label> -->
+                    <input type="text" name="middlename" id="middlename" placeholder="Tên lót..." class="form-control form-control-sm rounded-0" value="{% if employee.middlename %}{{employee.middlename}}{% endif %}">
                 </div>
                 <div class="form-group mb-3">
-                    <label for="lastname" class="control-label">Tên</label>
-                    <input type="text" name="lastname" id="lastname" class="form-control form-control-sm rounded-0" value="{% if employee.lastname %}{{employee.lastname}}{% endif %}" required>
+                    <!-- <label for="lastname" class="control-label">Tên</label> -->
+                    <input type="text" name="lastname" id="lastname" placeholder="Tên..." class="form-control form-control-sm rounded-0" value="{% if employee.lastname %}{{employee.lastname}}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="gender" class="control-label">Giới Tính</label>
+                    <!-- <label for="gender" class="control-label">Giới Tính</label> -->
                     <select name="gender" id="gender" class="form-control form-control-sm rounded-0" required>
                         {% if employee.gender and employee.gender == 'Male' %}
                         <option selected>Male</option>
@@ -35,32 +35,34 @@
                         <option>Female</option>
                         {% endif %}
                     </select>
+                    
                 </div>
                 <div class="form-group mb-3">
-                    <label for="dob" class="control-label">Ngày Sinh</label>
-                    <input type="date" name="dob" id="dob" class="form-control form-control-sm rounded-0" value="{% if employee.dob %}{{ employee.dob|date:'Y-m-d' }}{% endif %}" required>
+                    <!-- <label for="dob" class="control-label">Ngày Sinh</label> -->
+                    <!-- <input type="date" name="dob" id="dob" class="form-control form-control-sm rounded-0" value="{% if employee.dob %}{{ employee.dob|date:'Y-m-d' }}{% endif %}" required> -->
+                    <input type="text" placeholder="Ngày sinh" onfocus="(this.type='date')" name="dob" id="dob" class="form-control form-control-sm rounded-0" value="{% if employee.dob %}{{ employee.dob|date:'Y-m-d' }}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="email" class="control-label">Email</label>
-                    <input type="email" name="email" id="email" class="form-control form-control-sm rounded-0" value="{% if employee.email %}{{employee.email}}{% endif %}" required>
+                    <!-- <label for="email" class="control-label">Email</label> -->
+                    <input type="email" name="email" id="email" class="form-control form-control-sm rounded-0" placeholder="Email..." value="{% if employee.email %}{{employee.email}}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="contact" class="control-label">Liên Hệ</label>
-                    <input type="text" name="contact" id="contact" class="form-control form-control-sm rounded-0" value="{% if employee.contact %}{{employee.contact}}{% endif %}" required>
+                    <!-- <label for="contact" class="control-label">Liên Hệ</label> -->
+                    <input type="text" name="contact" id="contact" placeholder="Số điện thoại..." class="form-control form-control-sm rounded-0" value="{% if employee.contact %}{{employee.contact}}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="address" class="control-label">Địa Chỉ</label>
-                    <textarea rows="3" name="address" id="address" class="form-control form-control-sm rounded-0" required>{% if employee.address %}{{employee.address}}{% endif %}</textarea>
+                    <!-- <label for="address" class="control-label">Địa Chỉ</label> -->
+                    <textarea rows="3" name="address" id="address" placeholder="Địa chỉ..." class="form-control form-control-sm rounded-0" required>{% if employee.address %}{{employee.address}}{% endif %}</textarea>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group mb-3">
-                    <label for="department_id" class="control-label">Phòng Ban</label>
+                    <!-- <label for="department_id" class="control-label">Phòng Ban</label> -->
                     <select name="department_id" id="department_id" class="form-select form-select-sm rounded-0" required>
                         {% if not employee.department_id %}
-                        <option value="1" disabled selected>Vui Lòng Chọn Ở Đây</option>
+                        <option value="1" disabled selected>Phòng Ban</option>
                         {% else %}
-                        <option value="1" disabled>Vui Lòng Chọn Ở Đây</option>
+                        <option value="1" disabled>Phòng Ban</option>
                         {% endif %}
                         {% for department in departments %}
                             {% if employee.department_id and employee.department_id == department.id %}
@@ -73,12 +75,12 @@
                     </select>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="position_id" class="control-label">Vị Trí</label>
+                    <!-- <label for="position_id" class="control-label">Vị Trí</label> -->
                     <select name="position_id" id="position_id" class="form-select form-select-sm rounded-0" required>
                         {% if not employee.position_id %}
-                        <option value="1" disabled selected>Vui Lòng Chọn Ở Đây</option>
+                        <option value="1" disabled selected>Vị Trí</option>
                         {% else %}
-                        <option value="1" disabled>Vui Lòng Chọn Ở Đây</option>
+                        <option value="1" disabled>Vị trí</option>
                         {% endif %}
                         {% for position in positions %}
                             {% if employee.position_id and employee.position_id == position.id %}
@@ -91,15 +93,16 @@
                     </select>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="date_hired" class="control-label">Ngày Vào Làm</label>
-                    <input type="date" name="date_hired" id="date_hired" class="form-control form-control-sm rounded-0" value="{% if employee.date_hired %}{{ employee.date_hired|date:'Y-m-d' }}{% endif %}" required>
+                    <!-- <label for="date_hired" class="control-label">Ngày Vào Làm</label> -->
+                    <!-- <input type="date" name="date_hired" id="date_hired" class="form-control form-control-sm rounded-0" value="{% if employee.date_hired %}{{ employee.date_hired|date:'Y-m-d' }}{% endif %}" required> -->
+                    <input type="text" placeholder="Ngày vào làm" onfocus="(this.type='date')" name="date_hired" id="date_hired" class="form-control form-control-sm rounded-0" value="{% if employee.date_hired %}{{ employee.date_hired|date:'Y-m-d' }}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="salary" class="control-label">Lương</label>
-                    <input type="number" step="any" name="salary" id="salary" class="form-control form-control-sm rounded-0" value="{% if employee.salary %}{{employee.salary}}{% endif %}" required>
+                    <!-- <label for="salary" class="control-label">Lương</label> -->
+                    <input type="number" step="any" name="salary" id="salary" placeholder="Lương..." class="form-control form-control-sm rounded-0" value="{% if employee.salary %}{{employee.salary}}{% endif %}" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="status" class="control-label">Trạng Thái</label>
+                    <!-- <label for="status" class="control-label">Trạng Thái</label> -->
                     <select name="status" id="status" class="form-select form-select-sm rounded-0" required>
                         {% if employee.status == 1 %}
                         <option value="1" selected >Active</option>

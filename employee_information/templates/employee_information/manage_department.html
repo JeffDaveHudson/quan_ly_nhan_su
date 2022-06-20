@@ -3,12 +3,12 @@
     <form action="" id="department-form">
         <input type="hidden" name="id" value="{% if department.pk %}{{department.pk}}{% endif %}">
         <div class="form-group mb-3">
-            <label for="name" class="control-label">Tên Phòng Ban</label>
-            <input type="text" name="name" id="name" class="form-control form-control-sm rounded-0" value="{% if department.name %}{{department.name}}{% endif %}" required>
+            <!-- <label for="name" class="control-label">Tên Phòng Ban</label> -->
+            <input type="text" name="name" id="name" placeholder="Tên phòng ban..." class="form-control form-control-sm rounded-0" value="{% if department.name %}{{department.name}}{% endif %}" required>
         </div>
         <div class="form-group mb-3">
-            <label for="description" class="control-label">Mô Tả</label>
-            <textarea rows="5" name="description" id="description" class="form-control form-control-sm rounded-0" required>{% if department.description %}{{department.description}}{% endif %}</textarea>
+            <!-- <label for="description" class="control-label">Mô Tả</label> -->
+            <textarea rows="5" name="description" placeholder="Mô tả..." id="description" class="form-control form-control-sm rounded-0" required>{% if department.description %}{{department.description}}{% endif %}</textarea>
         </div>
         <div class="form-group mb-3">
             <label for="status" class="control-label">Trạng Thái</label>
