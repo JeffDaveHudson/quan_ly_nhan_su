@@ -16,15 +16,15 @@
                     <col width="5%">
                     <col width="30%">
                     <col width="30%">
-                    <col width="15%">
-                    <col width="20%">
+                    <!-- <col width="15%"> -->
+                    <col width="35%">
                 </colgroup>
                 <thead>
                     <tr>
                         <th class="text-center py-1">STT</th>
                         <th class="text-center py-1">Tên Phòng Ban</th>
                         <th class="text-center py-1">Mô Tả</th>
-                        <th class="text-center py-1">Trạng Thái</th>
+                        <!-- <th class="text-center py-1">Trạng Thái</th> -->
                         <th class="text-center py-1">Hành Động</th>
                     </tr>
                 </thead>
@@ -34,11 +34,11 @@
                         <td class="px-2 py-1 text-center">{{ department.id }}</td>
                         <td class="px-2 py-1 text-start">{{ department.name }}</td>
                         <td class="px-2 py-1 text-start">{{ department.description }}</td>
-                        <td class="px-2 py-1 text-center">
+                        <!-- <td class="px-2 py-1 text-center">
                             {% if department.status == 1 %}
                             <span class="badge bg-primary rounded-pill px-3">Active</span> {% else %}
                             <span class="badge bg-secondary rounded-pill px-3">Inactive</span> {% endif %}
-                        </td>
+                        </td> -->
                         <td class="px-2 py-1 text-center">
                             <button class="mdc-button mdc-button--raised p-1 icon-button filled-button--light mdc-ripple-upgraded edit-data" type="button" data-id="{{ department.pk }}" title="Chỉnh Sửa">
                                 <i class="material-icons mdc-button__icon">edit</i>

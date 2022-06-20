@@ -18,8 +18,8 @@
                     <col width="20%">
                     <col width="20%">
                     <col width="20%">
-                    <col width="10%">
-                    <col width="10%">
+                    <!-- <col width="10%"> -->
+                    <col width="20%">
                 </colgroup>
                 <thead>
                     <tr>
@@ -28,7 +28,7 @@
                         <th class="text-center py-1">Tên</th>
                         <th class="text-center py-1">Phòng Ban</th>
                         <th class="text-center py-1">Vị Trí</th>
-                        <th class="text-center py-1">Trạng Thái</th>
+                        <!-- <th class="text-center py-1">Trạng Thái</th> -->
                         <th class="text-center py-1">Hành Động</th>
                     </tr>
                 </thead>
@@ -40,11 +40,11 @@
                         <td class="px-2 py-1 text-start">{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</td>
                         <td class="px-2 py-1 text-start">{{ employee.department_id }}</td>
                         <td class="px-2 py-1 text-start">{{ employee.position_id }}</td>
-                        <td class="px-2 py-1 text-center">
+                        <!-- <td class="px-2 py-1 text-center">
                             {% if employee.status == 1 %}
                             <span class="badge bg-primary rounded-pill px-3">Active</span> {% else %}
                             <span class="badge bg-secondary rounded-pill px-3">Inactive</span> {% endif %}
-                        </td>
+                        </td> -->
                         <td class="px-2 py-1 text-center">
                             <button class="mdc-button mdc-button--raised p-1 icon-button mdc-ripple-upgraded view-data" type="button" data-id="{{ employee.pk }}" title="Xem Chi Tiết">
                                 <i class="material-icons mdc-button__icon">visibility</i>
