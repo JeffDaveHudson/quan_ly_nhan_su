@@ -1,7 +1,4 @@
-# quan_ly_nhan_su
+# quan_ly_nhan_su_PK
 
-pip install Django
-
-python manage.py migrate
-
-python manage.py runserver
+NguyenHuuHongPhuc
+Bouphaphanh Koh Soukthavilay
